@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br
+">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formulario de recrutamento</title>
+</head>
+<body>
+    <!--Iniciando cotainer-->
+    <div class="container"> 
+        <div class="form-img"><!--divisão da imagem-->
+            <img src="img/form.png">
+        </div>
+        <div class = "form"><!--divisão formulario-->
+            <!--onsubmit é um evento que é acionado quando um formulário é enviado-->
+            <form id="dados-formulario" onsubmit="return validarCampos(this.cep, this.telefone)"><!--sem ação-->
+                <div class="form-header">
+                    <div class="title">
+                        <H1>Cadastre-se</H1><!--titulo-->
+                    </div>
+                    <div class="login-button"><!--botão de cadrastro-->
+                        <button><a href="#">Entrar</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="group-title">
+                        <h3>Dados Pessoais</h3>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firsname">Nome Completo</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome" pattern="[a-zA-Z]" style="width: 250px;"required >
+                    </div>
+
+                    <div class="input-box">
+                        <label for="date">Data de nascimento</label>
+                        <input id="date" type="date" name="date" placeholder="xx/xx/xxxx" style="width: 250px;" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="origem">Nacionalidade</label>
+                        <input id="origem" type="text" name="origem" placeholder="Digite sua nacionalidade" style="width: 250px;" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="end">Endereço</label>
+                        <input id="end" type="text" name="end" placeholder="Digite seu endereço" style="width: 250px;" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado" placeholder="selecione" style="width: 250px;" required>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cidade">Cidade</label>
+                        <input id="cidade" type="text" name="cidade" placeholder="Digite o nome da sua cidade" style="width: 250px;" required>
+                    </div>
+
+                    <!--minlenght e maxlength limitam o número de caracteres, força com que o usuário insira a quantidade correta de números do CEP (contando com o traço(-))-->
+                    <div class="input-box">
+                        <label for="cep">CEP</label>
+                        <input type="tel" id="cep" name="cep" \ placeholder="xxxxx-xxx" style="width: 250px;" required minlength="9" maxlength="9">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Telefone</label>
+                        <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" style="width: 250px;" required minlength="14" maxlength="15">
+                    </div>
+                    
+                    <div class="gender-inputs">
+                        <div class="gender-title">
+                        <h5>Gênero</h5>
+                    </div>
+                    </div>
+                </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input id="female" type="radio" name="gender" value="Feminino" required>
+                            <label for="female">Feminino</label>
+                        </div>
+                    </div>
+                        <div class="gender-input">
+                            <input id="male" type="radio" name="gender" value="Masculino" required>
+                            <label for="male">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="others" type="radio" name="gender" value="Outros" required>
+                            <label for="others">Outros</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="none" type="radio" name="gender" value="Prefiro não dizer" required>
+                            <label for="none">Prefiro não dizer</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="group-title">
+                            <h3>Experiências Profissionais Adicionais</h3>
+                        </div>
+                    
+                        <div class="input-box">
+                            <label for="empresa">Empresa</label>
+                            <input id="empresa" type="text" name="empresa" placeholder="Digite o nome da ultima ou atual empresa" style="width: 250px;" required>
+                        </div>
+                    
+                        <div class="input-box">
+                            <label for="cargo">Cargo</label>
+                            <input id="cargo" type="text" name="cargo" placeholder="Digite o seu cargo atual" style="width: 250px;" required>
+                        </div>
+                    
+                        <div class="gender-inputs">
+                            <div class="gender-title">
+                                <h5>Período de Atuação</h5>
+                            </div>
+                            <div class="gender-group">
+                            <div class="input-box">
+                                <label for="inicio">De</label>
+                                <input id="inicio" type="month" name="inicio" placeholder="mm/aaaa" style="width: 220px;" required>
+                            </div> 
+                            <div class="input-box">
+                                <label for="fim">Até</label>
+                                <input id="fim" type="month" name="fim" placeholder="mm/aaaa" style="width: 220px;" required>
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="atividades">Atividades e Responsabilidades</label>
+                            <input id="atividades" type="text" name="atividades" placeholder="Digite as principais" style="width: 520px;" required>
+                        </div>
+
+                        <div class="input-box">
+                            <div class="gender-inputs">
+                                <div class="gender-title">
+                                <h5>Possui mais experiencias</h5>
+                                
+                            </div>  
+                        </div>
+                        <div class="gender-input">
+                            <input id="nao" type="radio" name="experiencia" value="Não" required>
+                            <label for="nao">Não</label>
+                        </div>
+                        <div class="gender-input">
+                            <input id="sim" type="radio" name="experiencia" value="Sim" required>
+                            <label for="sim">Sim</label>
+                        </div>
+                        </div>  
+
+                        <div class="input-box">
+                            <label for="mais">Se sim, quais</label>
+                            <input id="mais" type="text" name="mais" placeholder="Ex: Empresa, Cargo, Período, Atividades e Responsabilidades" style="width: 520px;">
+                        </div>
+
+                        <div class="input-group">
+                            <div class="group-title">
+                              <h3>Habilidades Técnicas e idiomas</h3>
+                            </div>
+                          
+                            <div class="input-box">
+                              <label for="habilidade">Habilidade</label>
+                              <input id="habilidade" type="text" name="habilidade" placeholder="Ex: softwares, ferramentas e certificações" style="width: 520px;" required>
+                            </div>
+
+                                <div class="input-box">
+                                  <label for="idioma1">Idioma</label>
+                                  <input id="idioma1" type="text" name="idioma1" placeholder="Insira o(s) idioma(s)" style="width: 250px;" required>
+                                </div>
+                              
+                                <div class="input-box">
+                                  <label for="nivelidioma1">Nível de Proficiência</label>
+                                  <select id="nivelidioma1" name="nivelidioma1" style="width: 250px;" required>
+                                    <option value="">Selecione o nível</option>
+                                    <option value="Básico">Básico</option>
+                                    <option value="Intermediário">Intermediário</option>
+                                    <option value="Avançado">Avançado</option>
+                                    <option value="Fluente">Fluente</option>
+                                  </select>
+                                </div> 
+                                
+                                <div class="input-group">
+                                    <div class="group-title">
+                                        <h3>Habilidades Comportamentais</h3>
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="habilidades">Habilidades</label>
+                                        <input id="habilidades" type="text" name="habilidades" placeholder="Digite três mais importantes" style="width: 520px;" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="input-group">
+                                    <div class="group-title">
+                                        <h3>Informações Detalhadas Adicionais</h3>
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="salario">Pretensão Salarial</label>
+                                        <input id="salario" type="number" name="salario" placeholder="Digite o valor" style="width: 250px;" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="disponibilidade">Disponibilidade para Início</label>
+                                        <input id="disponibilidade" type="text" name="disponibilidade" placeholder="Digite sua disponibilidade para início" style="width: 250px;" required>
+                                    </div>
+                                </div>
+
+                <div class="continue-button">
+                    <button type="submit"><a>Enviar</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--Fim container-->
+
+    <!--Scripts de formatação-->
+    <!--arquivos JavaScript externos na página HTML-->
+    <script src="js/formatar_campos.js"></script>
+    <script src="js/pegar_dados_formulario.js"></script>
+    <!--interpretado e executado pelo navegador do usuário quando a página da 
+        web é carregada ou quando um evento é acionado-->
+</body>
+</html>

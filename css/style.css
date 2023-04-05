@@ -1,0 +1,223 @@
+/*importação fontes do google*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+/*Corpo do texto*/
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        0deg,
+        hsl(0deg 88% 46%) 0%,
+        hsl(0deg 79% 48%) 6%,
+        hsl(0deg 73% 50%) 12%,
+        hsl(0deg 71% 51%) 18%,
+        hsl(0deg 70% 53%) 24%,
+        hsl(1deg 71% 56%) 29%,
+        hsl(1deg 73% 60%) 35%,
+        hsl(1deg 74% 64%) 41%,
+        hsl(0deg 75% 67%) 47%,
+        hsl(11deg 86% 67%) 53%,
+        hsl(31deg 87% 59%) 59%,
+        hsl(52deg 84% 45%) 65%,
+        hsl(82deg 72% 52%) 71%,
+        hsl(133deg 89% 60%) 76%,
+        hsl(132deg 89% 64%) 82%,
+        hsl(132deg 89% 67%) 88%,
+        hsl(133deg 89% 70%) 94%,
+        hsl(133deg 88% 73%) 100%
+      );
+}
+/*Configuração geral do corpo*/
+.container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+/*região da imagem*/
+.form-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-image: linear-gradient(
+  0deg,
+  hsl(0deg 88% 46%) 0%,
+  hsl(0deg 79% 48%) 6%,
+  hsl(0deg 73% 50%) 12%,
+  hsl(0deg 71% 51%) 18%,
+  hsl(0deg 70% 53%) 24%,
+  hsl(1deg 71% 56%) 29%,
+  hsl(1deg 73% 60%) 35%,
+  hsl(1deg 74% 64%) 41%,
+  hsl(0deg 75% 67%) 47%,
+  hsl(11deg 86% 67%) 53%,
+  hsl(31deg 87% 59%) 59%,
+  hsl(52deg 84% 45%) 65%,
+  hsl(82deg 72% 52%) 71%,
+  hsl(133deg 89% 60%) 76%,
+  hsl(132deg 89% 64%) 82%,
+  hsl(132deg 89% 67%) 88%,
+  hsl(133deg 89% 70%) 94%,
+  hsl(133deg 88% 73%) 100%
+);
+}
+/*tamanho da imagem*/
+.form-img img{
+    width: 20rem;
+    height: auto;
+    
+}
+/*Região das peguntas*/
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3rem;
+}
+/*titulo Cadastre-se*/
+.form-header {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+/*intens botão de entrar*/
+.login-button {
+    display: flex;
+    align-items: center;
+}
+/*decoração botão*/
+.login-button button{
+    border: none;
+    background-color: #ff4545;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*botão ao passar o mouse*/
+.login-button button:hover{
+    background-color: #fd3333;
+}
+/*configuração de texto do botão*/
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+/*traçado em baixo do titulo*/
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #ff4545;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+/*configuração da classe dos topicos*/
+.input-group, select{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+}
+/*Organização dos topicos separadamente*/
+.input-box, select {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+/*caixa de respostas*/
+.input-box input, select{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+/*cor dos blocos*/
+.input-box input, select{
+    background-color: #eeeeee75;
+}
+/*cor da borda dos blocos de texto de inserção*/
+.input-box input:focus-visible{
+    outline: 1px solid #ff4545;
+}
+/*cor da borda dos blocos de texto de seleção*/
+.input-box select:focus-visible{
+    outline: 1px solid #ff4545;
+}
+/*configutação de testo em h3*/
+.input-box label,
+.gender-title h3{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+/*configuração nome dentro das caixas de textos*/
+.input-box::placeholder{
+    color: #0000000b;
+}
+/*configuração de selaçaõ por marcação*/
+.gender-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem;
+}
+/*configuração de selaçaõ por marcação individualmente*/
+.gender-group
+.input-box{
+    padding-top: 1px;
+    margin-top: 2px;
+}
+/*alinhação das caixas de texto*/
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+/*distancia entre as caixas de texto*/
+.gender-input input{
+    margin-right: 0.3rem;
+}
+/*texto das marcações*/
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+/*botão de envio*/
+.continue-button button {
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    background-color: #ff4545;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor:pointer;
+}
+/*alteração da cor do botão ao passar o mouse*/
+.continue-button button:hover{
+    background-color: #fd3333;
+}
+/*fonte do botão*/
+.continue-button button a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
